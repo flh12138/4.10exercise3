@@ -11,7 +11,6 @@ int main()
 	if (srcMat.empty())return -1;
 
 	float angle = -10.0, scale = 1;
-
 	cv::Point2f center(srcMat.cols / 2.0, srcMat.rows / 2.0);
 	cv::Mat rot = cv::getRotationMatrix2D(center, angle, scale);
 	cv::Rect bbox = cv::RotatedRect(center, srcMat.size(), angle).boundingRect();
